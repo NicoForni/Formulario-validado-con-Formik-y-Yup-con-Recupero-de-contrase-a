@@ -1,0 +1,47 @@
+.contenedor {
+    background: #E8E8E8;
+	font-family: 'Open Sans', sans-serif;
+    margin: 2% 40%;
+    padding: 1rem;
+}
+
+.boton-ingresar{
+    background-color: #b622ad;
+    color: white;
+    border-radius: 6px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 94%;
+    height: 30px;
+    cursor: pointer;
+}
+
+.boton-ingresar:active{
+    background-color: #8f1388;
+}
+
+.usuario{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 10px;
+}
+
+.password{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 10px;
+}
+
+.input-usuario{
+    border-radius: 7px;
+    padding: 6px 4px;
+    border-color: #3485cc;
+}
+
+.input-password{
+    border-radius: 7px;
+    padding: 6px 4px;
+    border-color: #3485cc;
+}
