@@ -89,3 +89,13 @@
     padding: 1.8px;
     cursor: pointer;
 }
+
+.input-required{
+    color: red;
+    font-size: 12px;
+}
+
+.img-required{
+    width: 12px;
+    height: 10px;
+}

@@ -1,12 +1,12 @@
 
 import './App.css';
 import React from "react";
-import Form from './Components/Form';
+import Formulario from './Components/Form';
 
 function App() {
   return (
     <div className="App">
-      <Form/>
+      <Formulario/>
     </div>
   );
 }
