@@ -13,12 +13,25 @@
     margin-left: auto;
     width: 94%;
     height: 30px;
-    cursor: pointer;
+    cursor: pointer;     
+    border: 2px solid #b622ad;      
+}
+
+.boton-ingresar:hover{
+    background-color: #d62acc;
+    border: 2px solid #d62acc;   
 }
 
 .boton-ingresar:active{
     background-color: #8f1388;
+    border: 2px solid #8f1388;   
 }
+
+/* ver como es para dejar un de un determinado color el boton presionado
+
+.boton-ingresar:focus{
+    background-color: aliceblue;
+} */
 
 .usuario{
     display: flex;
@@ -36,17 +49,33 @@
 
 .input-usuario{
     border-radius: 7px;
+    padding: 6px 4px;    
+    border: 2px solid #000;
+}
+
+.input-usuario:focus {
+    border-radius: 7px;
     padding: 6px 4px;
     border-color: #3485cc;
+    outline: none;    
 }
 
 .input-password{
     border-radius: 7px;
     padding: 6px 4px;
-    border-color: #3485cc;
+    border: 2px solid #000;
 }
 
-.s{
+.input-password:focus{
+    border-radius: 7px;
+    padding: 6px 4px;
+    border-color: #3485cc;
+    outline: none;
+}
+
+.forgot-password{
+    text-align: left;
+    font-size: 2vh;
+    padding: 10px;
     color: blue;
-    background-color: #3485cc;
 }
