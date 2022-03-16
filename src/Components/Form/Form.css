@@ -38,6 +38,7 @@
     flex-direction: column;
     text-align: left;
     padding: 10px;
+    font-weight: 600;
 }
 
 .password{
@@ -45,6 +46,7 @@
     flex-direction: column;
     text-align: left;
     padding: 10px;
+    font-weight: 600;
 }
 
 .input-usuario{
@@ -78,6 +80,7 @@
     font-size: 2vh;
     padding: 10px;
     color: blue;
+    text-decoration: underline;
 }
 
 .show-hide{

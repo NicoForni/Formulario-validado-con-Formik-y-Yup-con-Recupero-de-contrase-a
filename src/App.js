@@ -1,12 +1,19 @@
 
 import './App.css';
 import React from "react";
-import Formulario from './Components/Form';
+import Formulario from './Components/Form/Form';
+import Password from "./Components/Password/Password";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <Formulario/>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Formulario/>}/>
+          <Route path='/recoverypassword' element={<Password/>} />          
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
