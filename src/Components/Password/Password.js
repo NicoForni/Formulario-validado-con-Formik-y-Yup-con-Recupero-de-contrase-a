@@ -6,17 +6,24 @@ import { Link } from "react-router-dom";
 
 
 const Password = () => {
+
+    const digitsOnly = (value) => /^\d+$/.test(value)
     
     const formSchema = Yup.object().shape({
-        completar: Yup                    
-          .string(<div className="input-required">Ingrese su usuario</div>),
+        dni: Yup                    
+          .string(),
+
         ci: Yup                    
-          .string(<div className="input-required">Ingrese su usuario</div>),
+          .string(),
+
         pasaporte: Yup                    
-          .string(<div className="input-required">Ingrese su usuario</div>),
+          .string(),
+
         completar: Yup
         .string(<div className="input-required">Ingrese su contraseña</div>)
-        //.string(<div className="input-required"><img className="img-required" src="https://cdn.iconscout.com/icon/premium/png-256-thumb/error-2547221-2136999.png" alt="error"></img> Este campo no debe estar vacío</div>),
+        .required(<div className="input-required"><img className="img-required" src="https://cdn.iconscout.com/icon/premium/png-256-thumb/error-2547221-2136999.png" alt="error"></img> Este campo no debe estar vacío</div>) 
+        .test('Digits only', <div className="input-required">Debe completar solo con números</div>, digitsOnly)
+        
       });
     
     return(
@@ -60,7 +67,7 @@ const Password = () => {
                     <Link to="/"><button type="submit" className="boton-volver">Volver</button></Link>
                     <br/>
                     <br/>
-                    <button type="submit" className="boton-confirmar">Confirmar</button>
+                    <button type="submit" className="boton-confirmar">Continuar</button>
                 </Form>
             </Formik>
         </>
