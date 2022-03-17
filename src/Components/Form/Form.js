@@ -47,22 +47,20 @@ const Formulario = () => {
                             />
                         </div>
                         <div className="password">
-                            <label htmlFor="password">Contraseña <div style={{color: "red", display:"contents"}}> *</div></label>                            
-                            <Field className="input-password" 
+                            <label htmlFor="password">Contraseña{" "}<div style={{ color: "red", display: "contents" }}> *</div></label>
+                            <Field className="input-password"
                                 type={password ? "password" : "text"}
-                                id="password" 
-                                name="password" 
+                                id="password"
+                                name="password"
                                 placeholder="Ingresá tu contraseña"
                             />
-                            <ErrorMessage
-                                name='password'
-                                component='div'
+                            <img className="show-hide" src={password ? "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGmVba5IO7cb6dEShqSmQg30K4_fPiV61RNYHJsnBbRh6aNkhZ_H2YfRAFAqXm_amZ6-A&usqp=CAU" : "https://www.pngfind.com/pngs/m/59-593921_png-file-svg-password-eye-icon-png-transparent.png" } alt="img" onClick={() => setPassword(!password)}></img>
+                            <ErrorMessage 
+                                name="password" 
+                                component="div" 
                             />
-                            <span>
-                                <img className="show-hide" src={password ? "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGmVba5IO7cb6dEShqSmQg30K4_fPiV61RNYHJsnBbRh6aNkhZ_H2YfRAFAqXm_amZ6-A&usqp=CAU" : "https://www.pngfind.com/pngs/m/59-593921_png-file-svg-password-eye-icon-png-transparent.png"} alt="img" onClick={() => setPassword(!password)}></img>
-                            </span>                            
                         </div>
-                       <Link to="/recoverypassword"><div className="forgot-password">¿Olvidaste tu contraseña?</div></Link>
+                        <Link to="/recoverypassword"><div className="forgot-password">¿Olvidaste tu contraseña?</div></Link>
                     <button type="submit" className="boton-ingresar">Ingresar</button>
                 </Form>                
             </Formik>            

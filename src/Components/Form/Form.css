@@ -42,6 +42,7 @@
 }
 
 .password{
+    position: relative;
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -84,13 +85,14 @@
 }
 
 .show-hide{
+    cursor: pointer;
+    position: absolute;
+    top: 33px;
+    right: 13px;
     width: 24px;
-    float: right;
     height: 17px;
-    position: relative;
     bottom: 25px;
     padding: 1.8px;
-    cursor: pointer;
 }
 
 .input-required{
