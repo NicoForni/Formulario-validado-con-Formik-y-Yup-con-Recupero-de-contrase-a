@@ -29,10 +29,8 @@ const Password = () => {
     return(
         <>
             <Formik
-                initialValues={{
-                dni: "",
-                ci: "",
-                pasaporte:"",     
+                initialValues={{                
+                documento:"",     
                 completar:"",
                 }}
                 validationSchema={formSchema}
@@ -41,13 +39,13 @@ const Password = () => {
                     <h2>Recuperar contraseña</h2>
                         <div className="documento">
                             <label htmlFor="name">Tipo de documento<div style={{color: "red", display:"contents"}}>*</div></label>
-                                <Field className="input-documento" name="dni" as="select">
+                                <Field className="input-documento" name="documento" as="select">
                                     <option value="dni">DNI</option>
                                     <option value="ci">C.I</option>
                                     <option value="pasaporte">PASAPORTE</option>
                                 </Field>
                                 <ErrorMessage
-                                    name='dni'
+                                    name='documento'
                                     component='div'                                
                                 />
                         </div>
