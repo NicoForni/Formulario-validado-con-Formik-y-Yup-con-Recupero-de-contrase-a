@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 
 const Formulario = () => {
     const [password, setPassword] = useState(false)
+    const a = 1
     
     const formSchema = Yup.object().shape({
         name: Yup
@@ -70,4 +71,3 @@ const Formulario = () => {
 
 export default Formulario;
 
-// actualizado
