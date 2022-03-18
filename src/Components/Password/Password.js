@@ -3,9 +3,25 @@ import React from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Password = () => {
+
+    const recoveryPassword = () => {
+        toast.success('Su contraseña ha sido regenerada!', {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+            });
+    }
+
 
     const digitsOnly = (value) => /^\d+$/.test(value)
     
@@ -34,7 +50,7 @@ const Password = () => {
                 completar:"",
                 }}
                 validationSchema={formSchema}
-                onSubmit={(values) => console.log(values)} >
+                onSubmit={(values) => console.log(values) || recoveryPassword() }>
                 <Form className="contenedor-options">
                     <h2>Recuperar contraseña</h2>
                         <div className="documento">

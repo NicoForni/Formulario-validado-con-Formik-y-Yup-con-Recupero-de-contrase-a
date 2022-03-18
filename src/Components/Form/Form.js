@@ -3,11 +3,25 @@ import React, { useState } from "react";
 import {Formik, Form, Field, ErrorMessage} from "formik";
 import * as Yup from "yup";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Formulario = () => {
     const [password, setPassword] = useState(false)
-        
+    
+    const notify = () => {
+        toast.info('Cargando', {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+            });
+    }
     
     const formSchema = Yup.object().shape({
         name: Yup
@@ -31,7 +45,7 @@ const Formulario = () => {
                 password: "",                
                 }}
                 validationSchema={formSchema}
-                onSubmit={(values) => console.log(values)} >                           
+                onSubmit={(values) => console.log(values) || notify() }>                           
                 <Form className="contenedor"> 
                     <h2>Log in</h2>
                         <div className="usuario">
