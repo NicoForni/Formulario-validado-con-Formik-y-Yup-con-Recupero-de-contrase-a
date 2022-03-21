@@ -1,37 +1,90 @@
-.contenedor {
-    background: #E8E8E8;
-	font-family: 'Open Sans', sans-serif;
-    margin: 2% 40%;
+
+
+.contenedor {    
+    position: relative;	
+    margin: 0% 40%;
     padding: 1rem;
+    right: 23%;
+    top: 218px;
+}
+
+.title-sesion{
+    position: relative;
+    bottom: 28px;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 31px;
+    text-align: left;
+    padding: 10px;
+}
+
+.man{
+    position: absolute;
+    width: 758px;
+    height: 582px;
+    left: 544px;
+    top: -50px;
+}
+
+.rectangulo{
+    position: absolute;
+    width: 851px;
+    height: 944px;
+    background: #E1C6DC;
+    left: 767px;
+    bottom: 333px;
+    top: -263px;
+    border-radius: 0px 108px 0px 0px;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.logo{
+    position: relative;
+    bottom: 150px;
+    right: 43%;    
+}
+
+.title-logo{
+    position: relative;
+    width: 181px;
+    height: 42px;
+    left: 61px;
+    bottom: 201px;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 31px;
+    display: flex;
+    align-items: flex-end;
+    text-transform: uppercase;
+    color: #3B3B3B;
 }
 
 .boton-ingresar{
-    background-color: #b622ad;
+    background-color: #8A3879;
     color: white;
+    position: relative;
     border-radius: 6px;
     margin-right: auto;
     margin-left: auto;
-    width: 94%;
-    height: 30px;
-    cursor: pointer;     
-    border: 2px solid #b622ad;      
+    width: 96%;
+    height: 36px;
+    cursor: pointer;
+    border: 2px solid #8A3879;
+    top: 18px;     
 }
 
 .boton-ingresar:hover{
-    background-color: #d62acc;
-    border: 2px solid #d62acc;   
+    background-color: #A54F93;
+    border: 2px solid #A54F93;   
 }
 
 .boton-ingresar:active{
-    background-color: #8f1388;
-    border: 2px solid #8f1388;   
+    background-color: #78306B;
+    border: 2px solid #78306B;   
 }
 
-/* ver como es para dejar un de un determinado color el boton presionado
-
-.boton-ingresar:focus{
-    background-color: aliceblue;
-} */
 
 .usuario{
     display: flex;
@@ -52,42 +105,45 @@
 
 .input-usuario{
     border-radius: 7px;
-    padding: 6px 4px;    
-    border: 2px solid #000;
+    padding: 8px 4px;    
+    border: 2px solid #939393;
 }
 
 .input-usuario:focus {
     border-radius: 7px;
-    padding: 6px 4px;
+    padding: 8px 4px;
     border-color: #3485cc;
     outline: none;    
 }
 
 .input-password{
     border-radius: 7px;
-    padding: 6px 4px;
-    border: 2px solid #000;
+    padding: 8px 4px;
+    border: 2px solid #939393;
 }
 
 .input-password:focus{
     border-radius: 7px;
-    padding: 6px 4px;
+    padding: 8px 4px;
     border-color: #3485cc;
     outline: none;
 }
 
 .forgot-password{
-    text-align: left;
+    position: relative;
+    top: 38px;    
+    text-align: center;
     font-size: 2vh;
     padding: 10px;
-    color: blue;
+    color: #8A3879;
     text-decoration: underline;
+    font-weight: 600;
 }
 
 .show-hide{
     cursor: pointer;
     position: absolute;
-    top: 33px;
+    top: 38px;
     right: 13px;
     width: 24px;
     height: 17px;

@@ -45,9 +45,13 @@ const Formulario = () => {
                 password: "",                
                 }}
                 validationSchema={formSchema}
-                onSubmit={(values) => console.log(values) || notify() }>                           
-                <Form className="contenedor"> 
-                    <h2>Log in</h2>
+                onSubmit={(values) => console.log(values) || notify() }>    
+                <Form className="contenedor">   
+                    <img className="rectangulo" src="/images/rectangulo.svg" alt="rectangulo"></img>
+                    <img className="man" src="/images/man.svg" alt="man"></img>
+                    <img className="logo" src="/images/logo.svg" alt="logo"></img>    
+                    <div className="title-logo">TEKBNK</div>
+                    <div className="title-sesion">Iniciá Sesión</div>
                         <div className="usuario">
                             <label htmlFor="name">Usuario <div style={{color: "red", display:"contents"}}> *</div></label>
                             <Field className="input-usuario" 
@@ -75,9 +79,9 @@ const Formulario = () => {
                                 component="div" 
                             />
                         </div>
-                        <Link to="/recoverypassword"><div className="forgot-password">¿Olvidaste tu contraseña?</div></Link>
                     <button type="submit" className="boton-ingresar">Ingresar</button>
-                </Form>                
+                    <Link to="/recoverypassword"><div className="forgot-password">Olvidé mi contraseña</div></Link>                                  
+                </Form>          
             </Formik>            
         </>
     )

@@ -52,7 +52,11 @@ const Password = () => {
                 validationSchema={formSchema}
                 onSubmit={(values) => console.log(values) || recoveryPassword() }>
                 <Form className="contenedor-options">
-                    <h2>Recuperar contraseña</h2>
+                    <img className="rectangulo" src="/images/rectangulo.svg" alt="rectangulo"></img>
+                    <img className="man" src="/images/man.svg" alt="man"></img>
+                    <img className="logo" src="/images/logo.svg" alt="logo"></img>    
+                    <div className="title-logo">TEKBNK</div>
+                    <div className="title-sesion">Olvidé mi contraseña</div>
                         <div className="documento">
                             <label htmlFor="name">Tipo de documento<div style={{color: "red", display:"contents"}}>*</div></label>
                                 <Field className="input-documento" name="documento" as="select">
@@ -77,11 +81,9 @@ const Password = () => {
                                 name='completar'
                                 component='div'                                
                             />
-                    </div>
-                    <Link to="/"><button type="submit" className="boton-volver">Volver</button></Link>
-                    <br/>
-                    <br/>
-                    <button type="submit" className="boton-confirmar">Continuar</button>
+                    </div>                    
+                        <Link to="/"><button type="submit" className="boton-volver">Volver</button></Link>
+                        <button type="submit" className="boton-confirmar">Continuar</button>                    
                 </Form>
             </Formik>
         </>
