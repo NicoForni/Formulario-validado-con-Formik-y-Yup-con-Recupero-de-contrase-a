@@ -166,9 +166,77 @@
 /*MOBILE*/
 
 @media (max-width: 767px) {
-    .contenedor {
-        margin: 2% 10%;
+
+    .contenedor{
+        display: grid;
+        position: relative;        
+        padding: 1rem;
+        right: 23%;
+        top: 218px;
     }
+
+    .usuario{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        padding: 10px;
+        font-weight: 600;
+    }
+
+    .password{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        padding: 10px;
+        font-weight: 600;
+    } 
+
+    
+    .logo{
+        position: absolute;
+        left: 28.8%;
+        right: 60.35%;
+        top: 3.3%;
+        bottom: 90.6%;
+    }
+    
+    .title-logo{
+        position: relative;
+        width: 181px;
+        height: 194px;
+        left: 62px;
+        bottom: 46px;
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 26px;
+        line-height: 31px;
+        display: flex;
+        align-items: flex-end;
+        text-transform: uppercase;
+        color: #3B3B3B;
+    }
+
+    .rectangulo {
+        position: absolute;
+        width: 592px;
+        height: 340px;
+        bottom: 215px;
+        left: -120px;
+        top: -129px;
+        background: #E1C6DC;
+        border-radius: 40px 40px 0px 0px;
+        z-index: -2;
+    }
+
+    .man{
+        position: absolute;
+        width: 235px;
+        height: 182px;
+        left: 0px;
+        top: 0px;
+    } 
 }
 
 /*TABLET*/
