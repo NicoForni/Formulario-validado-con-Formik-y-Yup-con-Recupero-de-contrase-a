@@ -81,9 +81,11 @@ const Password = () => {
                                 name='completar'
                                 component='div'                                
                             />
-                    </div>                    
+                    </div>    
+                    <div className="testsito">
                         <Link to="/"><button type="submit" className="boton-volver">Volver</button></Link>
                         <button type="submit" className="boton-confirmar">Continuar</button>                    
+                        </div>                
                 </Form>
             </Formik>
         </>
