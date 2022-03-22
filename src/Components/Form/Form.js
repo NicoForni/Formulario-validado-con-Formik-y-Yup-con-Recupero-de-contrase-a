@@ -48,10 +48,10 @@ const Formulario = () => {
                 onSubmit={(values) => console.log(values) || notify() }>    
                 <Form className="contenedor">   
                     <img className="rectangulo" src="/images/rectangulo.svg" alt="rectangulo"></img>
-                    <img className="man" src="/images/man.svg" alt="man"></img>
+                    <img className="man" src="/images/man.svg" alt="man with books"></img>
                     <img className="logo" src="/images/logo.svg" alt="logo"></img>    
-                    <div className="title-logo">TEKBNK</div>
-                    <div className="title-sesion">Iniciá Sesión</div>
+                    <h1 className="title-logo">TEK<span class="bnk">BNK</span></h1>
+                    <h2 className="title-sesion">Iniciá Sesión</h2>
                         <div className="usuario">
                             <label htmlFor="name">Usuario <div style={{color: "red", display:"contents"}}> *</div></label>
                             <Field className="input-usuario" 

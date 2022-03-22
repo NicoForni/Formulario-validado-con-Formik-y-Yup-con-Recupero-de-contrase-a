@@ -53,10 +53,10 @@ const Password = () => {
                 onSubmit={(values) => console.log(values) || recoveryPassword() }>
                 <Form className="contenedor-options">
                     <img className="rectangulo" src="/images/rectangulo.svg" alt="rectangulo"></img>
-                    <img className="man" src="/images/man.svg" alt="man"></img>
+                    <img className="man" src="/images/man.svg" alt="man with books"></img>
                     <img className="logo" src="/images/logo.svg" alt="logo"></img>    
-                    <div className="title-logo">TEKBNK</div>
-                    <div className="title-sesion">Olvidé mi contraseña</div>
+                    <h1 className="title-logo">TEK<span class="bnk">BNK</span></h1>
+                    <h2 className="title-sesion">Olvidé mi contraseña</h2>
                         <div className="documento">
                             <label htmlFor="name">Tipo de documento<div style={{color: "red", display:"contents"}}>*</div></label>
                                 <Field className="input-documento" name="documento" as="select">
