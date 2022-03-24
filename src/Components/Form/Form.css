@@ -1,11 +1,18 @@
+/*=======DESKTOP========*/
 
-
+@media screen and (min-width: 1280px) {
 .contenedor {    
-    position: relative;	
-    margin: 0% 40%;
-    padding: 1rem;
-    right: 23%;
-    top: 218px;
+    display: flex;    
+}
+
+.contenedor-formulario{
+    margin: 16rem 1rem 0rem 11rem;
+    width: 25rem;
+}
+
+.contenedor-imagenes{
+    display: flex;
+    margin-left: 6rem;
 }
 
 .title-sesion{
@@ -18,29 +25,26 @@
     padding: 10px;    
 }
 
-.man{
-    position: absolute;
-    width: 758px;
-    height: 582px;
-    left: 544px;
-    top: -50px;
+.man{    
+    width: 50rem;
+    height: 41rem;   
+    margin: 17% 0;
 }
 
 .rectangulo{
-    position: absolute;
-    width: 851px;
-    height: 944px;
+    position: fixed;
+    width: 100%;
+    height: 100%;
     background: #E1C6DC;
-    left: 767px;
-    bottom: 333px;
-    top: -263px;
+    margin: 0 12rem;
     border-radius: 0px 108px 0px 0px;
     transform: matrix(-1, 0, 0, 1, 0, 0);
-}
+    z-index: -1;
+} 
 
-.logo{
+ .logo{
     position: relative;
-    bottom: 150px;
+    bottom: 23%;
     right: 43%;    
 }
 
@@ -92,6 +96,7 @@
     text-align: left;
     padding: 10px;
     font-weight: 600;
+    width: 23.8rem;
 }
 
 .password{
@@ -164,29 +169,111 @@
 .bnk {
     font-weight: bold;
 }
+}
 
-/*==========EMPIEZA ADAPTACION RESPONSIVE========*/
 
-/*MOBILE*/
+/*========TABLET=========*/
 
-@media (max-width: 767px) {
+@media screen and (max-width: 1279px) and (min-width: 768px) {
 
-    .contenedor{
-        position: inherit;
-        display: grid;
-        width: 100%;
-        margin: 0 auto;        
-        padding: 0;   
+    .contenedor {    
+        display: flex;    
     }
-
+    
+    .contenedor-formulario{
+        margin: 16rem 1rem 0rem 11rem;
+        width: 25rem;
+    }
+    
+    .contenedor-imagenes{
+        display: flex;
+        margin-left: 6rem;
+    }
+    
+    .title-sesion{
+        position: relative;
+        bottom: 28px;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 31px;
+        text-align: left;
+        padding: 10px;    
+    }
+    
+    .man{    
+        width: 50rem;
+        height: 41rem;   
+        margin: 17% 0;
+    }
+    
+    .rectangulo{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: #E1C6DC;
+        margin: 0 12rem;
+        border-radius: 0px 108px 0px 0px;
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+        z-index: -1;
+    } 
+    
+     .logo{
+        position: relative;
+        bottom: 23%;
+        right: 43%;    
+    }
+    
+    .title-logo{
+        position: relative;
+        width: 181px;
+        height: 42px;
+        left: 61px;
+        bottom: 201px;
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 26px;
+        line-height: 31px;
+        display: flex;
+        align-items: flex-end;
+        text-transform: uppercase;
+        color: #3B3B3B;
+    }
+    
+    .boton-ingresar{
+        background-color: #8A3879;
+        color: white;
+        position: relative;
+        border-radius: 6px;
+        margin-right: auto;
+        margin-left: auto;
+        width: 96%;
+        height: 36px;
+        cursor: pointer;
+        border: 2px solid #8A3879;
+        top: 18px;     
+    }
+    
+    .boton-ingresar:hover{
+        background-color: #A54F93;
+        border: 2px solid #A54F93;   
+    }
+    
+    .boton-ingresar:active{
+        background-color: #78306B;
+        border: 2px solid #78306B;   
+    }
+    
+    
     .usuario{
         display: flex;
         flex-direction: column;
         text-align: left;
+        width: 20rem;
         padding: 10px;
         font-weight: 600;
     }
-
+    
     .password{
         position: relative;
         display: flex;
@@ -194,67 +281,247 @@
         text-align: left;
         padding: 10px;
         font-weight: 600;
-    } 
-
-    
-    .logo{    
-        position: absolute;
-        left: 28%;
-        right: 60%;
-        top: 3%;
-        bottom: 90%;
     }
     
-    .title-logo{
-        position: absolute;
-        left: 39%;
-        right: 60%;
-        top: 2%;
-        bottom: 90%;
-        font-family: 'Rubik';
-        font-style: normal;
-        font-weight: 300;
-        font-size: 26px;        
-        text-transform: uppercase;
-        color: #3B3B3B;
+    .input-usuario{
+        border-radius: 7px;
+        padding: 8px 4px;    
+        border: 2px solid #939393;
     }
+    
+    .input-usuario:focus {
+        border-radius: 7px;
+        padding: 8px 4px;
+        border-color: #3485cc;
+        outline: none;    
+    }
+    
+    .input-password{
+        border-radius: 7px;
+        padding: 8px 4px;
+        border: 2px solid #939393;
+    }
+    
+    .input-password:focus{
+        border-radius: 7px;
+        padding: 8px 4px;
+        border-color: #3485cc;
+        outline: none;
+    }
+    
+    .forgot-password{
+        position: relative;
+        top: 38px;    
+        text-align: center;
+        font-size: 2vh;
+        padding: 10px;
+        color: #8A3879;
+        text-decoration: underline;
+        font-weight: 600;
+    }
+    
+    .show-hide{
+        cursor: pointer;
+        position: absolute;
+        top: 38px;
+        right: 13px;
+        width: 24px;
+        height: 17px;
+        bottom: 25px;
+        padding: 1.8px;
+    }
+    
+    .input-required{
+        color: red;
+        font-size: 12px;
+    }
+    
+    .img-required{
+        width: 12px;
+        height: 10px;
+    }
+    
+    .bnk {
+        font-weight: bold;
+    }
+}
 
+/*=====MOBILE======*/
+
+@media screen and (max-width: 767px)  {
+
+    .contenedor {    
+        display: flex; 
+        flex-direction: column-reverse;   
+    }
+    
+    .contenedor-formulario{
+        margin: 17rem 2rem 0rem 2rem;
+        width: 86%;
+    }
+    
+    .contenedor-imagenes{
+        display: flex;
+        justify-content: center;
+    }
+    
     .title-sesion{
-        position: inherit;
+        position: relative;
         bottom: 28px;
         font-weight: 700;
         font-size: 26px;
         line-height: 31px;
         text-align: left;
-        padding: 10px;
-        padding-top: 72%;
+        padding: 10px;    
     }
-
-    .rectangulo {     
-        position: absolute;   
-        width: 100%;     
-        height: 24%;   
-        left: 0;
-        top: 21%;
-        background: #E1C6DC;
-        border-radius: 40px 40px 0px 0px;
-        z-index: -2;        
-    }
-
-    .man{        
+    
+    .man{    
         position: absolute;
-        width: 68%;
-        height: 35%;
-        left: 12%;
-        top: 10%;
+        top: 2rem;
+        left: 1.5rem;
+        width: 300px;
+        height: 300px;   
+        margin: 2% 2%;
+    }
+    
+    .rectangulo{
+        position: fixed;
+        width: 58rem;
+        height: 13rem;
+        background: #E1C6DC;
+        margin: 7rem 0;
+        border-radius: 213px 213px 0px 0px;
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+        z-index: -1;
     } 
-}
-
-
-/*DESKTOP*/
-
-@media (min-width: 1280px) {
-    .contenedor {
-        margin: 2% 38%;
+    
+     .logo{
+        display: flex;
+        position: relative;
+        bottom: 16.2rem;
+        right: -6rem;    
+        height: 46px;
+        width: 46px;
+    }
+    
+    .title-logo{        
+        position: relative;
+        width: 181px;
+        height: 42px;
+        left: 10rem;
+        bottom: 19.3rem;
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 2rem;
+        line-height: 31px;
+        display: flex;
+        align-items: flex-end;
+        text-transform: uppercase;
+        color: #3B3B3B;
+    }
+    
+    .boton-ingresar{
+        background-color: #8A3879;
+        color: white;
+        position: relative;
+        border-radius: 6px;
+        margin-right: auto;
+        margin-left: auto;
+        width: 96%;
+        height: 36px;
+        cursor: pointer;
+        border: 2px solid #8A3879;
+        top: 18px;     
+    }
+    
+    .boton-ingresar:hover{
+        background-color: #A54F93;
+        border: 2px solid #A54F93;   
+    }
+    
+    .boton-ingresar:active{
+        background-color: #78306B;
+        border: 2px solid #78306B;   
+    }
+    
+    
+    .usuario{
+        display: flex;
+        flex-direction: column;
+        text-align: left;        
+        padding: 10px;
+        font-weight: 600;
+    }
+    
+    .password{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        padding: 10px;
+        font-weight: 600;
+    }
+    
+    .input-usuario{
+        border-radius: 7px;
+        padding: 8px 4px;    
+        border: 2px solid #939393;
+    }
+    
+    .input-usuario:focus {
+        border-radius: 7px;
+        padding: 8px 4px;
+        border-color: #3485cc;
+        outline: none;    
+    }
+    
+    .input-password{
+        border-radius: 7px;
+        padding: 8px 4px;
+        border: 2px solid #939393;
+    }
+    
+    .input-password:focus{
+        border-radius: 7px;
+        padding: 8px 4px;
+        border-color: #3485cc;
+        outline: none;
+    }
+    
+    .forgot-password{
+        position: relative;
+        top: 38px;    
+        text-align: center;
+        font-size: 3vh;
+        padding: 10px;
+        color: #8A3879;
+        text-decoration: underline;
+        font-weight: 600;
+    }
+    
+    .show-hide{
+        cursor: pointer;
+        position: absolute;
+        top: 38px;
+        right: 13px;
+        width: 24px;
+        height: 17px;
+        bottom: 25px;
+        padding: 1.8px;
+    }
+    
+    .input-required{
+        color: red;
+        font-size: 12px;
+    }
+    
+    .img-required{
+        width: 12px;
+        height: 10px;
+    }
+    
+    .bnk {
+        font-weight: bold;
     }
 }

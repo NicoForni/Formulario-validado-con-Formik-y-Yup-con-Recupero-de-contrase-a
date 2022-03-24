@@ -41,47 +41,51 @@ const Formulario = () => {
         <>      
             <Formik
                 initialValues={{
-                name: "",
-                password: "",                
+                    name: "",
+                    password: "",                
                 }}
-                validationSchema={formSchema}
-                onSubmit={(values) => console.log(values) || notify() }>    
+            validationSchema={formSchema}
+            onSubmit={(values) => console.log(values) || notify() }>           
                 <Form className="contenedor">   
-                    <img className="rectangulo" src="/images/rectangulo.svg" alt="rectangulo"></img>
-                    <img className="man" src="/images/man.svg" alt="man with books"></img>
-                    <img className="logo" src="/images/logo.svg" alt="logo"></img>    
-                    <h1 className="title-logo">TEK<span class="bnk">BNK</span></h1>
-                    <h2 className="title-sesion">Iniciá Sesión</h2>
-                        <div className="usuario">
-                            <label htmlFor="name">Usuario <div style={{color: "red", display:"contents"}}> *</div></label>
-                            <Field className="input-usuario" 
-                                type="text" 
-                                id="name" 
-                                name="name"                             
-                                placeholder="Ingresá tu nombre de usuario"
-                            />
-                            <ErrorMessage
-                                name='name'
-                                component='div'                                
-                            />
-                        </div>
-                        <div className="password">
-                            <label htmlFor="password">Contraseña{" "}<div style={{ color: "red", display: "contents" }}> *</div></label>
-                            <Field className="input-password"
-                                type={password ? "password" : "text"}
-                                id="password"
-                                name="password"
-                                placeholder="Ingresá tu contraseña"
-                            />
-                            <img className="show-hide" src={password ? "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGmVba5IO7cb6dEShqSmQg30K4_fPiV61RNYHJsnBbRh6aNkhZ_H2YfRAFAqXm_amZ6-A&usqp=CAU" : "https://www.pngfind.com/pngs/m/59-593921_png-file-svg-password-eye-icon-png-transparent.png" } alt="img" onClick={() => setPassword(!password)}></img>
-                            <ErrorMessage 
-                                name="password" 
-                                component="div" 
-                            />
-                        </div>
-                    <button type="submit" className="boton-ingresar">Ingresar</button>
-                    <Link to="/recoverypassword"><div className="forgot-password">Olvidé mi contraseña</div></Link>                                  
-                </Form>          
+                    <div className="contenedor-formulario">                                  
+                        <img className="logo" src="/images/logo.svg" alt="logo"></img>    
+                        <h1 className="title-logo">TEK<span class="bnk">BNK</span></h1>
+                        <h2 className="title-sesion">Iniciá Sesión</h2>
+                            <div className="usuario">
+                                <label htmlFor="name">Usuario <div style={{color: "red", display:"contents"}}> *</div></label>
+                                <Field className="input-usuario" 
+                                    type="text" 
+                                    id="name" 
+                                    name="name"                             
+                                    placeholder="Ingresá tu nombre de usuario"
+                                />
+                                <ErrorMessage
+                                    name='name'
+                                    component='div'                                
+                                    />
+                            </div>
+                            <div className="password">
+                                <label htmlFor="password">Contraseña{" "}<div style={{ color: "red", display: "contents" }}> *</div></label>
+                                <Field className="input-password"
+                                    type={password ? "password" : "text"}
+                                    id="password"
+                                    name="password"
+                                    placeholder="Ingresá tu contraseña"
+                                    />
+                                <img className="show-hide" src={password ? "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGmVba5IO7cb6dEShqSmQg30K4_fPiV61RNYHJsnBbRh6aNkhZ_H2YfRAFAqXm_amZ6-A&usqp=CAU" : "https://www.pngfind.com/pngs/m/59-593921_png-file-svg-password-eye-icon-png-transparent.png" } alt="img" onClick={() => setPassword(!password)}></img>
+                                <ErrorMessage 
+                                    name="password" 
+                                    component="div" 
+                                    />
+                            </div>
+                        <button type="submit" className="boton-ingresar">Ingresar</button>
+                        <Link to="/recoverypassword"><h2 className="forgot-password">Olvidé mi contraseña</h2></Link> 
+                    </div>                                 
+                    <div className="contenedor-imagenes">                    
+                        <div className="rectangulo">{/* <!--rectangulo--> */}</div>
+                        <img className="man" src="/images/man.svg" alt="man with books"></img>
+                    </div>      
+                </Form>                  
             </Formik>            
         </>
     )

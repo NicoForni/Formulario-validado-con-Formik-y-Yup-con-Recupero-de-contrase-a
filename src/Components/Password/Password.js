@@ -51,41 +51,45 @@ const Password = () => {
                 }}
                 validationSchema={formSchema}
                 onSubmit={(values) => console.log(values) || recoveryPassword() }>
-                <Form className="contenedor-options">
-                    <img className="rectangulo" src="/images/rectangulo.svg" alt="rectangulo"></img>
-                    <img className="man" src="/images/man.svg" alt="man with books"></img>
-                    <img className="logo" src="/images/logo.svg" alt="logo"></img>    
-                    <h1 className="title-logo">TEK<span class="bnk">BNK</span></h1>
-                    <h2 className="title-sesion">Olvidé mi contraseña</h2>
-                        <div className="documento">
-                            <label htmlFor="name">Tipo de documento<div style={{color: "red", display:"contents"}}>*</div></label>
-                                <Field className="input-documento" name="documento" as="select">
-                                    <option value="dni">DNI</option>
-                                    <option value="ci">C.I</option>
-                                    <option value="pasaporte">PASAPORTE</option>
-                                </Field>
+                <Form className="contenedor">
+                    <div className="contenedor-formulario">
+                        <img className="logo" src="/images/logo.svg" alt="logo"></img>    
+                        <h1 className="title-logo">TEK<span class="bnk">BNK</span></h1>
+                        <h2 className="title-sesion">Olvidé mi contraseña</h2>
+                            <div className="documento">
+                                <label htmlFor="name">Tipo de documento<div style={{color: "red", display:"contents"}}>*</div></label>
+                                    <Field className="input-documento" name="documento" as="select">
+                                        <option value="dni">DNI</option>
+                                        <option value="ci">C.I</option>
+                                        <option value="pasaporte">PASAPORTE</option>
+                                    </Field>
+                                    <ErrorMessage
+                                        name='documento'
+                                        component='div'                                
+                                    />
+                            </div>
+                        <div className="completar">
+                            <label htmlFor="name">Completar <div style={{color: "red", display:"contents"}}> *</div></label>
+                                <Field className="input-completar" 
+                                    type="text" 
+                                    id="completar" 
+                                    name="completar"                             
+                                    placeholder="Ingresá tu documento"
+                                />
                                 <ErrorMessage
-                                    name='documento'
+                                    name='completar'
                                     component='div'                                
                                 />
+                        </div>    
+                        <div className="botones-formulario">
+                            <Link to="/"><button type="submit" className="boton-volver">Volver</button></Link>
+                            <button type="submit" className="boton-confirmar">Continuar</button>                    
                         </div>
-                    <div className="completar">
-                        <label htmlFor="name">Completar <div style={{color: "red", display:"contents"}}> *</div></label>
-                            <Field className="input-completar" 
-                                type="text" 
-                                id="completar" 
-                                name="completar"                             
-                                placeholder="Ingresá tu documento"
-                            />
-                            <ErrorMessage
-                                name='completar'
-                                component='div'                                
-                            />
-                    </div>    
-                    <div className="testsito">
-                        <Link to="/"><button type="submit" className="boton-volver">Volver</button></Link>
-                        <button type="submit" className="boton-confirmar">Continuar</button>                    
-                        </div>                
+                    </div>      
+                    <div className="contenedor-imagenes">                              
+                        <div className="rectangulo">{/* <!--rectangulo--> */}</div>
+                        <img className="man" src="/images/man.svg" alt="man with books"></img>
+                    </div>
                 </Form>
             </Formik>
         </>
